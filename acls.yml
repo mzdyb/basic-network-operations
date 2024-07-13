@@ -1,0 +1,21 @@
+- name: Persist the facts into host vars
+  hosts: cisco-rtr1
+  gather_facts: false
+
+  tasks:
+
+  # - name: Network acls Manager
+  #   ansible.builtin.include_role:
+  #     name: network.acls.run
+  #   vars:
+  #     operations:
+  #       - name: persist
+  #     data_store:
+  #       local: "/tmp"
+
+  # - debug: var=inventory_hostname
+
+  - name: Gather ACLs configuration from target device
+    cisco.ios.ios_acls:
+      config: "{{ access_lists }}"
+      state: replaced

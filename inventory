@@ -1,1 +1,14 @@
----
+cisco:
+  hosts:
+    cisco-rtr1:
+      ansible_host: 192.168.122.100
+    cisco-sw1:
+      ansible_host: 192.168.122.104
+  vars:
+    ansible_network_os: cisco.ios.ios
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_user: admin
+    ansible_password: redhat
+    ansible_become: true
+    ansible_become_method: enable
+    ansible_become_password: redhat
