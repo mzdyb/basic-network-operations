@@ -2,6 +2,8 @@ cisco:
   hosts:
     cisco-rtr1:
       ansible_host: 192.168.122.100
+    cisco-rtr2:
+      ansible_host: 192.168.122.101
     cisco-sw1:
       ansible_host: 192.168.122.104
   vars:
@@ -12,3 +14,12 @@ cisco:
     ansible_become: true
     ansible_become_method: enable
     ansible_become_password: redhat
+
+switches:
+  hosts:
+    cisco-sw1:
+
+routers:
+  hosts:
+    cisco-rtr1:
+    cisco-rtr2:

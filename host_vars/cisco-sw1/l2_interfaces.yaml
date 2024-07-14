@@ -1,0 +1,14 @@
+l2_interfaces:
+-   name: Ethernet0/0
+-   mode: trunk
+    name: Ethernet0/1
+    trunk:
+        encapsulation: dot1q
+-   access:
+        vlan: 10
+    mode: access
+    name: Ethernet0/2
+-   access:
+        vlan: 20
+    mode: access
+    name: Ethernet0/3

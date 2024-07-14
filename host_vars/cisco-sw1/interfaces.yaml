@@ -1,0 +1,11 @@
+interfaces:
+-   duplex: full
+    enabled: true
+    mode: layer3
+    name: Ethernet0/0
+-   enabled: true
+    name: Ethernet0/1
+-   enabled: true
+    name: Ethernet0/2
+-   enabled: true
+    name: Ethernet0/3

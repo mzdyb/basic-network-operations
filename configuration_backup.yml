@@ -1,0 +1,13 @@
+---
+- hosts: cisco
+  gather_facts: true
+
+  tasks:
+    - name: Network Backup and Resource Manager
+      ansible.builtin.include_role:
+        name: network.backup.run
+      vars:
+        operation: backup
+        type: full
+        data_store:
+          local: "./network_backup/"

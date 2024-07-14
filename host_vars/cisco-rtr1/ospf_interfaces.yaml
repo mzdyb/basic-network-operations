@@ -1,0 +1,7 @@
+ospf_interfaces:
+-   name: Ethernet0/0
+-   name: Ethernet0/1
+-   name: Ethernet0/2
+-   name: Ethernet0/2.10
+-   name: Ethernet0/2.20
+-   name: Ethernet0/3

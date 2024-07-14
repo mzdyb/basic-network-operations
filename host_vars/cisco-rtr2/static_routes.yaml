@@ -1,0 +1,10 @@
+static_routes:
+-   address_families:
+    -   afi: ipv4
+        routes:
+        -   dest: 192.168.10.0/24
+            next_hops:
+            -   forward_router_address: 10.0.0.1
+        -   dest: 192.168.20.0/24
+            next_hops:
+            -   forward_router_address: 10.0.0.1

@@ -1,0 +1,13 @@
+interfaces:
+-   enabled: true
+    name: Ethernet0/0
+-   enabled: true
+    name: Ethernet0/1
+-   enabled: true
+    name: Ethernet0/2
+-   enabled: true
+    name: Ethernet0/2.10
+-   enabled: true
+    name: Ethernet0/2.20
+-   enabled: false
+    name: Ethernet0/3
