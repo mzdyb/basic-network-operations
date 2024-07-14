@@ -1,7 +1,0 @@
-l3_interfaces:
--   ipv4:
-    -   address: 192.168.122.104/24
-    name: Ethernet0/0
--   name: Ethernet0/1
--   name: Ethernet0/2
--   name: Ethernet0/3

@@ -1,7 +1,0 @@
-static_routes:
--   address_families:
-    -   afi: ipv4
-        routes:
-        -   dest: 172.19.0.0/16
-            next_hops:
-            -   forward_router_address: 192.168.122.1
