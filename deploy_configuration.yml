@@ -1,0 +1,17 @@
+---
+- hosts: Deploy configuration
+  hosts: cisco
+  gather_facts: true
+  
+  tasks:
+  - name: Deploy configuration from host_vars
+    ansible.builtin.include_role:
+      name: network.base.resource_manager
+    vars:
+      operation: deploy
+      ansible_network_os: cisco.ios.ios
+      resources:
+        - 'interfaces'
+        - 'vlans'
+      data_store:
+        local: "."

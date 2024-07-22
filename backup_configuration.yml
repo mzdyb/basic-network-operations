@@ -1,5 +1,6 @@
 ---
-- hosts: cisco
+- name: Create configuration backup
+  hosts: cisco
   gather_facts: true
 
   tasks:

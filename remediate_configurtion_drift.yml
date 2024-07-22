@@ -1,0 +1,38 @@
+---
+- name: Remediate configuration drift
+  hosts: cisco
+  gather_facts: true
+
+  tasks:
+  - name: Remediate configuration drift on Cisco routers
+    ansible.builtin.include_role:
+      name: network.base.resource_manager
+    vars:
+      operation: remediate
+      ansible_network_os: cisco.ios.ios
+      resources:
+        - 'static_routes'
+        - 'interfaces'
+        - 'l2_interfaces'
+        - 'l3_interfaces'
+        - 'ospfv2'
+        - 'ospf_interfaces'
+      data_store:
+        local: "."
+    when: inventory_hostname in groups['routers']
+
+  - name: Remediate configuration drift on Cisco switches
+    ansible.builtin.include_role:
+      name: network.base.resource_manager
+    vars:
+      operation: remediate
+      ansible_network_os: cisco.ios.ios
+      resources:
+        - 'vlans'
+        - 'static_routes'
+        - 'interfaces'
+        - 'l2_interfaces'
+        - 'l3_interfaces'
+      data_store:
+        local: "."
+    when: inventory_hostname in groups['switches']
