@@ -36,3 +36,13 @@
       data_store:
         local: "."
     when: inventory_hostname in groups['switches']
+
+- name: Copy network data from localhost to backup host
+  hosts: backup-host
+
+  tasks:
+    - name: Copy network data
+      ansible.builtin.copy:
+        src: ./host_vars/
+        dest: /tmp/network/host_vars/
+        mode: '0777'

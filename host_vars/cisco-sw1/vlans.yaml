@@ -16,12 +16,12 @@ vlans:
     vlan_id: 20
 -   mtu: 1500
     name: VLAN0030
-    shutdown: enabled
+    shutdown: disabled
     state: active
     vlan_id: 30
 -   mtu: 1500
     name: VLAN0040
-    shutdown: enabled
+    shutdown: disabled
     state: active
     vlan_id: 40
 -   mtu: 1500

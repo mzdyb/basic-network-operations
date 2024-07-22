@@ -1,4 +1,15 @@
 ---
+- name: Copy network data from backup host to localhost
+  hosts: backup-host
+
+  tasks:
+    - name: Copy network data
+      ansible.builtin.copy:
+        src: /tmp/network/host_vars/
+        dest: "."
+        mode: '0777'
+        remote_src: true
+
 - name: Detect configuration drift
   hosts: cisco
   gather_facts: true

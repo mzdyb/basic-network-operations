@@ -1,10 +1,10 @@
 ---
-- name: Create configuration backup
+- name: Create local backup of network configurations
   hosts: cisco
   gather_facts: true
 
   tasks:
-    - name: Network backup
+    - name: Create backup
       ansible.builtin.include_role:
         name: network.backup.run
       vars:
@@ -13,9 +13,12 @@
         data_store:
           local: "./network_backup/"
 
-    - name: Copy network backup to target node
+- name: Copy backup from localhost to backup host
+  hosts: backup-host
+
+  tasks:
+    - name: Copy backup
       ansible.builtin.copy:
         src: ./network_backup/
-        dest: /tmp/network_backup/
+        dest: /tmp/network/network_backup/
         mode: '0777'
-      delegate_to: "{{ target_node }}"
