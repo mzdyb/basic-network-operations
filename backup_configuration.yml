@@ -4,21 +4,21 @@
   gather_facts: true
 
   tasks:
-    - name: Create backup
+    - name: Create backup in EE
       ansible.builtin.include_role:
         name: network.backup.run
       vars:
         operation: backup
         type: full
         data_store:
-          local: "./network_backup/"
+          local: "/tmp/network_backup/"
 
-- name: Copy backup from localhost to backup host
+- name: Copy backup from EE to backup host
   hosts: backup-host
 
   tasks:
     - name: Copy backup
       ansible.builtin.copy:
-        src: ./network_backup/
+        src: /tmp/network_backup/
         dest: /tmp/network/network_backup/
         mode: '0777'

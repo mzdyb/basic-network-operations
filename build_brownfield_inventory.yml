@@ -18,7 +18,7 @@
         - 'ospfv2'
         - 'ospf_interfaces'
       data_store:
-        local: "."
+        local: "/tmp/host_vars/"
     when: inventory_hostname in groups['routers']
 
   - name: Collect network data from Cisco switches
@@ -34,7 +34,7 @@
         - 'l2_interfaces'
         - 'l3_interfaces'
       data_store:
-        local: "."
+        local: "/tmp/host_vars/"
     when: inventory_hostname in groups['switches']
 
 - name: Copy network data from localhost to backup host
@@ -43,6 +43,6 @@
   tasks:
     - name: Copy network data
       ansible.builtin.copy:
-        src: ./host_vars/
-        dest: /tmp/network/host_vars/
+        src: /tmp/host_vars/
+        dest: /tmp/network/
         mode: '0777'

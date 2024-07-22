@@ -1,14 +1,14 @@
 ---
-- name: Copy network data from backup host to localhost
+- name: Copy network data from backup host to EE
   hosts: backup-host
 
   tasks:
     - name: Copy network data
-      ansible.builtin.copy:
-        src: /tmp/network/host_vars/
-        dest: "."
-        mode: '0777'
-        remote_src: true
+      ansible.posix.synchronize:
+        src: "/tmp/network/host_vars/"
+        dest: "/tmp/host_vars/"
+        mode: pull
+        recursive: yes
 
 - name: Remediate configuration drift
   hosts: cisco
@@ -29,7 +29,7 @@
         - 'ospfv2'
         - 'ospf_interfaces'
       data_store:
-        local: "."
+        local: "/tmp"
     when: inventory_hostname in groups['routers']
 
   - name: Remediate configuration drift on Cisco switches
@@ -45,5 +45,5 @@
         - 'l2_interfaces'
         - 'l3_interfaces'
       data_store:
-        local: "."
+        local: "/tmp"
     when: inventory_hostname in groups['switches']

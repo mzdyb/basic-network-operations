@@ -4,7 +4,7 @@ ansible-navigator:
     config:
       path: ansible.cfg
   execution-environment:
-    image: hub.rh.lab/ee-network:1.3
+    image: hub.rh.lab/ee-network:1.4
     pull:
       policy: missing
   playbook-artifact:

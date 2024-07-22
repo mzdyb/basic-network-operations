@@ -56,6 +56,7 @@ dependencies:
       - name: network.telemetry
       - name: network.vpn
       - name: community.general
+      - name: ansible.posix
 
   python:
     - pytz
