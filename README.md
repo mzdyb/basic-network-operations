@@ -1,5 +1,5 @@
 # Automating basic network operations with Ansible
-This repo shows simple example of network automation using [Ansible validated content](https://www.redhat.com/en/blog/automate-expert-ansible-validated-content).
+This repo shows the simple example of network automation using [Ansible validated content](https://www.redhat.com/en/blog/automate-expert-ansible-validated-content).
 The following use cases are presented:
 1. Create backup
 2. Create inventory (SoT) for brownfield network
