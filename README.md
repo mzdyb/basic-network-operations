@@ -24,5 +24,5 @@ This workflow creates network configuration backup and inventory with network da
 This workflow detects configuration drift and waits for approval before remediating it.
 
 ## Network topology
-Ansible validated content collections for networking are meant to be vendor agnostic but in this case Cisco infrastructure is used:
+Ansible validated content collections for networking are vendor agnostic but in this case Cisco infrastructure is used:
 ![image](https://github.com/user-attachments/assets/948636b6-ec33-4a80-ab10-a06a2f7a82ed)
