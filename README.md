@@ -13,6 +13,8 @@ The folder structure with files created on backup-host looks like this:
 
 The network_backup folder stores automatically created network configuration backup and host_vars folder stores network configuration data which we can use as Source of True for network configuration. SoT is central repository for configurations with up to date and reliable information. It serves as the reference point for desired state of the infrastructure. If we introduce this concept to our network management then we should have a way to automatically detect configuration drift between our SoT (reference configuration) and configuration on networking devices. This is the purpose of "Detect configuration drift" use case. When drift is detected we can fix it using automation presented in "Remediate configuration drift" use case.
 
+## Ansible Automation Platform workflows
+
 ![image](https://github.com/user-attachments/assets/3c738a21-0abc-4621-82c3-047e014d74ed)
 
 
