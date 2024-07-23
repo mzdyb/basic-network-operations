@@ -1,6 +1,7 @@
 ---
 - name: Copy network data from backup host to EE
   hosts: backup-host
+  become: true
 
   tasks:
     - name: Copy network data
@@ -9,6 +10,7 @@
         dest: "/tmp/host_vars/"
         mode: pull
         recursive: yes
+
 
 - name: Remediate configuration drift
   hosts: cisco
