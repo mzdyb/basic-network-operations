@@ -15,7 +15,6 @@ The network_backup folder stores automatically created network configuration bac
 
 ## Ansible Automation Platform workflows
 
-![image](https://github.com/user-attachments/assets/3c738a21-0abc-4621-82c3-047e014d74ed)
-
+![image](https://github.com/user-attachments/assets/e077f311-828e-4ab6-882c-ce66f09ded69)
 
 ![image](https://github.com/user-attachments/assets/34518168-dbd9-411c-b1d1-3eabca8cbafa)
