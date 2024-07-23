@@ -8,5 +8,7 @@ The following use cases are presented:
 
 Ansible collection network.backup is used to create backup . For other three use cases network.base collection is used.
 It this case both backup and inventory are copied to external server (backup-host) but another use case might be to copy them to Version Control system like GitHub or GitLab.
+The folder structure with files created on backup-host looks like this:  
+![image](https://github.com/user-attachments/assets/f2a6a811-055f-46f4-a3b4-5eee9e15b09a)  
 
-
+Tha network_backup folder stores automatically created network configuration backup and host_vars folder stores network configuration data which we can use as Source of True for network configuration.
