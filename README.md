@@ -22,7 +22,3 @@ This workflow creates network configuration backup and inventory with network da
 3. Detect and remediate configuration drift:
 ![image](https://github.com/user-attachments/assets/34518168-dbd9-411c-b1d1-3eabca8cbafa)
 This workflow detects configuration drift and waits for approval before remediating it.
-
-## Network topology
-Ansible validated content collections for networking are vendor agnostic but in this case Cisco infrastructure is used:  
-![image](https://github.com/user-attachments/assets/948636b6-ec33-4a80-ab10-a06a2f7a82ed)
